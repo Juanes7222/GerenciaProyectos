@@ -1,0 +1,573 @@
+\documentclass[12pt, letterpaper]{article}
+
+% =====================
+% Paquetes
+% =====================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage[hyphens]{url}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{referencias.bib} % Archivo de bibliografía
+\usepackage{xcolor}
+\usepackage{hyphenat}
+\usepackage{ragged2e} 
+\usepackage{placeins}
+\usepackage{csquotes}
+\geometry{margin=1in}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{1em}
+\onehalfspacing
+
+% Configuración títulos
+\titleformat{\section}{\normalfont\bfseries\uppercase}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection.}{1em}{}
+\renewcommand{\contentsname}{Índice}
+
+% Encabezados y pies
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
+% =====================
+% Documento
+% =====================
+% load hyperref as the last package to avoid redefinition/hook issues
+\usepackage[hidelinks]{hyperref}
+\let\cleardoublepage\clearpage
+\begin{document}
+
+% Portada
+\begin{titlepage}
+    \centering
+    \includegraphics[width=5cm]{logo_universidad.png}\par
+    \vspace{1cm}
+    
+    {\bfseries\LARGE Tercera entrega: Análisis de Alternativas\par}
+        \vspace{2cm}
+    {\large Autores: Jorge Luis Araque, Juan Camilo Velasquez, Juan David Tabares, Jhoan Esteban Corrales, Juan Esteban Cardona, Maicol Stiven Ruiz y Santiago Marin\par}
+    {\large Docente: Alexánder Quintero\par}
+    \vfill
+    {\Large Facultad de Ingenierías, Universidad Tecnológica de Pereira \par}
+    {\large Curso: Gerencia de Proyectos\par}
+    {\large Pereira, Colombia \\ \today \par}
+\end{titlepage}
+
+\renewcommand{\contentsname}{Tabla de contenido}
+% Índice
+\tableofcontents
+\newpage
+
+\section{Matriz de Componentes, actividades, responsables y costos.}
+
+\renewcommand{\arraystretch}{1.2} % Espaciado entre filas
+\setlength{\tabcolsep}{5pt}       % Espaciado entre columnas
+
+\begin{longtable}{|p{3.5cm}|p{6.5cm}|p{4.5cm}|}
+\caption{Matriz de Componentes, actividades, responsables y costos.}\label{tab:matriz} \\
+\hline
+\textbf{Componente} & \textbf{Actividad} & \textbf{Responsable} \\ \hline
+\endfirsthead
+\hline
+\textbf{Componente} & \textbf{Actividad} & \textbf{Responsable} \\ \hline
+\endhead
+\hline
+\multicolumn{3}{r}{\textit{Continúa en la siguiente página}} \\ \hline
+\endfoot
+\hline
+\multicolumn{3}{c}{\textit{Fuente: Elaboración propia.}} \\ \hline
+\endlastfoot
+
+Procedimientos \newline automáticos &
+- Identificación de procesos \newline
+- Diseño de flujos automatizados \newline
+- Desarrollo de software  \newline
+- Pruebas y capacitación &
+Ing. Sistemas \newline Grupo de Desarrollo \newline Jefes de Área\\ \hline
+
+Alta integración  \newline locativa &
+- Diagnóstico de espacios físicos \newline
+- Reestructuración de áreas de \newline trabajo \newline
+- Implementación de mobiliario \newline ergonómico y tecnológico \newline
+- Adecuaciones eléctricas y de red &
+Área de Infraestructura \newline Arquitecto \newline Proveedores externos \\ \hline
+
+Alta productividad de los funcionarios &
+- Capacitación en uso de \newline herramientas digitales \newline
+- Implementación de programas de bienestar \newline
+- Evaluaciones periódicas &
+Talento Humano \newline Supervisores directos \\ \hline
+
+Suficiente personal de apoyo &
+- Reclutamiento de personal \newline administrativo y técnico \newline
+- Capacitación inicial \newline
+- Definición de roles y turnos \newline
+- Evaluación de desempeño del \newline personal de apoyo &
+Talento Humano \newline Coordinadores de Área \\ \hline
+
+Aumento de la infraestructura tecnológica &
+- Compra de servidores y equipos \newline
+- Modernización del centro de datos \newline
+- Migración a la nube \newline
+- Implementación de ciberseguridad &
+Proveedor tecnológico \newline Área de TI \newline Jefes de Área\\ \hline
+\end{longtable}
+
+\section{Análisis de alternativas}
+
+\subsection{Alta integridad locativa}
+Para la cual se desarrollarán las actividades de diagnóstico de espacios físicos, reestructuración de áreas de trabajo, implementación de mobiliario ergonómico y tecnológico, y adecuaciones eléctricas y de red. En este orden de ideas, para la elaboración de las tareas antes mencionadas, se encargará el área de infraestructura, un arquitecto y proveedores externos respectivamente.  
+
+\subsection{Procedimientos automáticos}
+Este componente tendrá en cuenta las labores de identificación de procesos, diseño de flujos automatizados, implementación de software, y pruebas y capacitación. Para ello será necesario designar a un ingeniero de sistemas, un grupo de desarrolladores y jefes de área.  
+
+\subsection{Alta productividad de los funcionarios}
+Se requiere de la capacitación en uso de herramientas digitales, la implementación de programas de bienestar y evaluaciones periódicas, que estarán a cargo del talento humano y los supervisores directos.  
+
+\subsection{Suficiente personal de apoyo}
+Este componente requerirá reclutamiento de personal administrativo y técnico, capacitación inicial, definición de roles y turnos, y evaluación de desempeño del personal de apoyo. De estas labores se harán cargo el personal de talento humano y los coordinadores de área.  
+
+\subsection{Aumento de la infraestructura tecnológica}
+Tendrá como labores fundamentales la compra de servidores y equipos, modernización del centro de datos, migración a la nube y la implementación de ciberseguridad, que estarán a cargo de un proveedor tecnológico, área de TI y jefes de área.  
+ 
+
+\section{Estructura analítica del proyecto (EAP)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth]{Estructura analítica.png}
+    \caption{Estructura analítica del proyecto (EAP).}
+  \label{fig:eap}
+     \vspace{0.2cm}
+    \small Fuente: Elaboración propia.
+\end{figure}
+
+\section{Descripción del proyecto}
+
+\subsection{Objetivos}
+
+\subsubsection{Objetivo General}
+Implementar un sistema de trámites para licencias de conducción ágil, eficiente y automatizado, que mejore la experiencia del ciudadano. 
+
+\subsubsection{Objetivos Específicos}
+\begin{itemize}
+    \item Automatizar los procedimientos administrativos relacionados con la expedición de licencias
+    \item Incrementar la productividad de los funcionarios mediante capacitación y herramientas digitales.
+    \item Objetivo específico 3.
+\end{itemize}
+
+\subsection{Alcance}
+Descripción del alcance del proyecto.
+
+\subsection{Población impactada}
+Definir la población objetivo o beneficiaria.
+
+\subsection{Elementos normativos}
+Mencionar las normas, leyes, reglamentos o estándares aplicables (si existen).
+
+\subsection{Estructura organizacional}
+Explicación de la estructura organizativa propuesta para el proyecto.
+
+\subsubsection*{Manual de funciones por cargo}
+\begin{itemize}
+    \item Cargo 1 – Funciones principales.
+    \item Cargo 2 – Funciones principales.
+    \item Cargo 3 – Funciones principales.
+\end{itemize}
+
+\subsection{Ingeniería del producto}
+
+\subsubsection{Instalaciones locativas}
+Descripción de los espacios físicos necesarios.
+
+\subsubsection{Ingeniería de software}
+
+\textbf{Requisitos funcionales}
+
+\begin{enumerate} 
+
+\item \textbf{RF-01: }
+Cuando un usuario llega a la oficina de la Secretaría para la entrega final de la licencia (ya sea con cita previa o de forma presencial), el sistema debe permitir registrar su llegada, mostrar y administrar su turno, y registrar la hora de inicio y término de la atención. Para esto el sistema toma el identificador del usuario (por ejemplo número de documento) y el expediente electrónico y verifica que los pasos previos estén completos. El operador ve en pantalla el estado del expediente, el sistema asigna un ticket de atención o remarca la cita y mantiene la cola en orden. El resultado es un ticket con sello horario y el expediente con el registro de atención; el sistema debe responder rápido (interfaz visible en tiempos operativos) y dejar trazabilidad del inicio y cierre de la atención. Si el expediente no puede continuar, deberá registrarse el motivo y ofrecer reprogramación o abrir un caso de excepción.
+
+\item \textbf{RF-02: }
+Para cada entrega final el sistema debe mostrar una lista de verificación de los documentos requeridos (cédula, comprobante de pago, certificado CRC, resultados de exámenes, constancias RUNT, foto/biometría cuando aplique) y permitir que el funcionario marque cada ítem como “conforme”, “pendiente” o “rechazado”, añadiendo observaciones. El checklist está ligado al expediente electrónico: si falta un documento o está vencido, el sistema bloquea la expedición y genera las opciones correspondientes (reprogramación, recepción parcial con justificación, solicitud de subida de documento). Toda validación queda firmada digitalmente por el funcionario y queda auditada. En casos excepcionales la aceptación sin cumplimiento total solo es posible con justificación y firma del supervisor.
+
+\item \textbf{RF-03: }
+Antes de emitir la licencia, el sistema debe consultar el RUNT para verificar que los datos del solicitante, la categoría de la licencia, sanciones o duplicados estén correctamente registrados. Si la consulta indica inconsistencias o duplicados, la emisión queda bloqueada hasta su resolución y el sistema muestra el detalle para que el operador actúe. Si RUNT no está disponible, el sistema activa un modo de contingencia (registro del intento, documento “pendiente de sincronización”) y muestra al funcionario las limitaciones: se registran las acciones realizadas y se exige validación manual supervisada para casos excepcionales.
+
+\item \textbf{RF-04: }
+Cuando el expediente esté aprobado, el sistema debe construir el documento final de la licencia en el formato oficial con los datos validados (incluyendo fotografía, número de licencia, firmas digitales y códigos de verificación) y enviar el archivo a una cola de impresión segura. La impresión sólo se libera con la autenticación del funcionario y queda registrada (quién imprimió, cuándo y cuántas copias). El número de serie impreso se sincroniza con el expediente y con RUNT. Cualquier excepción exige doble verificación (operador y supervisor) y se registra para auditoría.
+
+\item \textbf{RF-05: }
+La expedición final sólo procede si el pago correspondiente ha sido verificado y conciliado. El sistema debe recibir la referencia de pago, validar el monto y el canal (pasarela en línea o registro presencial), y marcar el expediente como “pagado”. Si la conciliación falla, la emisión se bloquea; excepcionalmente, si existe comprobante físico y autorización, se permite un flujo condicionado que quede registrado y conciliado después, con responsabilidad financiera firmada
+
+\item \textbf{RF-06}
+El sistema debe integrar o consultar los resultados emitidos por los CRC para verificar la aptitud médica del solicitante según la categoría de licencia. Al recibir el número de radicado o el archivo, el sistema valida vigencia, parámetros exigidos y marca la condición del certificado (Apto, No apto, Vencido). Si el certificado no es válido o está vencido, la expedición queda bloqueada y se ofrece reprogramación para nueva valoración.
+
+\item \textbf{RF-07: }
+Cuando el expediente presente inconsistencias (documentales, errores de sincronización con RUNT, problemas de pago, etc.) el sistema debe permitir crear un caso con workflow: notificar al usuario, permitir la subida de documentos, asignar responsables internos, establecer plazos y registrar el cierre del caso. Todos los reprocesos deben quedar auditables y con SLA internos que permitan medir tiempos de resolución.
+
+\item \textbf{RF-08: }
+En cada hito relevante (confirmación o cambio de cita, aceptación de documentos, comprobante de pago, emisión de número de licencia, salida a mensajería) el sistema debe enviar notificaciones al usuario por el canal registrado (correo electrónico, SMS, o ambos) y mantener un log de intentos y entregas. Los comprobantes oficiales incluyen códigos de verificación y se generan en PDF listos para descarga o impresión por parte del usuario.
+
+\item \textbf{RF-09: }
+Cuando aplique por normativa o riesgos de suplantación, el sistema debe soportar la verificación biométrica (huella, cotejo facial) en puntos críticos, registrando intentos, resultado del cotejo y la autorización para continuar. Si no hay match biométrico, se debe activar un protocolo de verificación manual por supervisor y registrar la acción con justificación.
+
+\item \textbf{RF-10: }
+Siempre que RUNT, la pasarela de pagos u otros servicios externos presenten fallos, el sistema debe permitir operar en modo offline controlado: registrar transacciones y eventos localmente marcados como “pendientes de sincronización”, limitar acciones no permitidas sin conciliación, generar informes de sincronización y forzar la aprobación de un supervisor para acciones excepcionales. Posteriormente, al restablecerse el servicio, el sistema sincroniza y concilia automáticamente los registros.
+
+\item \textbf{RF-11: }
+El sistema debe aplicar las reglas de retención documental vigentes: programar plazos de conservación, generar alertas previas a eliminación, soportar la exportación segura a archivo y asegurar eliminación segura cuando proceda. Las políticas de protección de datos personales se aplican a todo el ciclo de vida del expediente.
+\end{enumerate}
+
+\textbf{Casos de uso}
+
+\noindent \textbf{UC-01}\\
+\textbf{Actores:} Solicitante (usuario), Funcionario, Sistema de turnos.\\
+\textbf{Precondición:} El solicitante llega a la oficina para la entrega final (con cita o sin cita).\\
+\textbf{Flujo principal:} 
+\begin{enumerate}
+  \item El solicitante se identifica en kiosco/ventanilla mediante documento o QR de trámite.
+  \item El sistema busca el expediente asociado y verifica pasos previos (pagos, CRC, resultados de exámenes, RUNT preliminar).
+  \item Si todo está correcto, el sistema genera turno y muestra tiempo estimado; imprime ticket si procede.
+  \item El sistema registra la hora de llegada en el expediente.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si falta documentación, el sistema notifica al funcionario y ofrece opciones: reprogramar, recepción parcial o apertura de caso de excepción.
+  \item Si el sistema de turnos está caído, el funcionario puede asignar turno manualmente con registro justificativo (modo contingencia).
+\end{itemize}
+\textbf{Postcondición:} Turno registrado; expediente actualizado con hora de llegada; usuario notificado del turno.\\
+\textbf{RFs relacionadas:} RF-01, RF-10, RF-07.\\
+\textbf{Prioridad:} Alta.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-02}\\
+\textbf{Actores:} Funcionario, Solicitante, Sistema documental.\\
+\textbf{Precondición:} Solicitante en ventanilla con turno activo.\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El funcionario abre el checklist del expediente en la interfaz.
+  \item El sistema presenta la lista de documentos requeridos (cédula, comprobante de pago, CRC, exámenes, foto).
+  \item El funcionario marca cada ítem “Conforme / Pendiente / Rechazado”, agrega observaciones y firma digitalmente.
+  \item Si todo es “Conforme”, se permite continuar al siguiente paso (RUNT / impresión).
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si algún documento está vencido o faltante, el sistema bloquea emisión y propone reprogramación o apertura de caso.
+\end{itemize}
+\textbf{Postcondición:} Checklist guardado y firmado; expediente con estado actualizado.\\
+\textbf{RFs relacionadas:} RF-02, RF-14, RF-10.\\
+\textbf{Prioridad:} Alta.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-03}\\
+\textbf{Actores:} Sistema, Servicio RUNT, Funcionario.\\
+\textbf{Precondición:} Checklist aprobado y listo para emitir.\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El sistema envía consulta en tiempo real a RUNT con datos del solicitante.
+  \item RUNT devuelve estado (OK / inconsistencias / duplicados / sanciones).
+  \item El sistema presenta el resultado al funcionario; si OK, continúa el flujo; si no, bloquea emisión e informa acciones a tomar.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si RUNT no responde, el sistema activa modo contingencia: crea registro “pendiente de sincronización” y habilita verificación manual supervisada.
+  \item Si hay duplicado, abrir caso de verificación de identidad y resolución.
+\end{itemize}
+\textbf{Postcondición:} Resultado de consulta registrado en auditoría; expediente listo o bloqueado según resultado.\\
+\textbf{RFs relacionadas:} RF-03, RF-10, RF-09, RF-07.\\
+\textbf{Prioridad:} Alta.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-04}\\
+\textbf{Actores:} Funcionario, Pasarela de pago, Solicitante.\\
+\textbf{Precondición:} Trámite con pago requerido registrado como pendiente.\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El funcionario ingresa referencia de pago o el sistema consulta la pasarela.
+  \item El sistema valida monto y canal, marca el expediente como “Pagado”.
+  \item El sistema genera recibo y lo asocia al expediente; notifica al solicitante.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si no se encuentra conciliación, el expediente queda bloqueado; el solicitante puede presentar comprobante físico para revisión (emisión condicional con firma de finanzas).
+  \item Si la pasarela no responde, registrar intento y operar en modo contingencia.
+\end{itemize}
+\textbf{Postcondición:} Estado de pago reflejado; recibo disponible para descarga.\\
+\textbf{RFs relacionadas:} RF-05, RF-10.\\
+\textbf{Prioridad:} Alta.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-05}\\
+\textbf{Actores:} Funcionario, CRC, Sistema integrador.\\
+\textbf{Precondición:} El solicitante debe presentar certificado médico exigido para primera licencia.\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El funcionario introduce el número de radicado o el archivo digital del certificado.
+  \item El sistema consulta vigencia y parámetros; marca como “Apto / No apto / Vencido”.
+  \item Si es “Apto”, continúa el flujo; si no, se informa y se agenda revaluación.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si el certificado fue subido por el CRC vía portal, se asocia automáticamente.
+  \item Si el sistema CRC no responde, gestionar contingencia y notificar al solicitante.
+\end{itemize}
+\textbf{Postcondición:} Estado del certificado registrado; bloqueo de emisión si no es apto.\\
+\textbf{RFs relacionadas:} RF-06, RF-15, RF-10.\\
+\textbf{Prioridad:} Alta.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-06}\\
+\textbf{Actores:} Funcionario, Solicitante, Dispositivo biométrico, Sistema biométrico.\\
+\textbf{Precondición:} Requisito normativo o riesgo de suplantación identificado; solicitante en ventanilla.\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El funcionario solicita biometría (huella o foto) al solicitante.
+  \item El dispositivo captura la muestra y el sistema compara con el registro asociado en el expediente.
+  \item Si hay match, permitir continuar; si no, activar protocolo de verificación manual y notificar supervisor.
+  \item Registrar intento y resultado en auditoría.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si el dispositivo falla, permitir captura manual y firma de verificación por supervisor.
+\end{itemize}
+\textbf{Postcondición:} Resultado biométrico registrado; autorización para emisión o inicio de caso de verificación.\\
+\textbf{RFs relacionadas:} RF-09, RF-07, RF-10, RF-14.\\
+\textbf{Prioridad:} Media.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-07}\\
+\textbf{Actores:} Funcionario, Solicitante, Supervisor, Equipo administrativo.\\
+\textbf{Precondición:} Detectada inconsistencia documental, fallo en RUNT, pago no conciliado o discrepancia de identidad.\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El funcionario crea el caso de excepción en el sistema, describiendo motivo y documentos faltantes.
+  \item El sistema notifica al solicitante y asigna responsable con plazo.
+  \item El solicitante sube documentos o acude según indicaciones; el responsable verifica y cierra el caso.
+  \item Caso cerrado: expediente actualizado y registro de acciones.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si el solicitante no cumple dentro del plazo, el sistema genera alertas y eventualmente cierra el caso por inactividad.
+  \item Para reprocesos por falla del sistema, el supervisor puede priorizar la atención al reencolar el expediente.
+\end{itemize}
+\textbf{Postcondición:} Caso documentado y auditable; resolución aplicada al expediente.\\
+\textbf{RFs relacionadas:} RF-07, RF-01, RF-03, RF-05.\\
+\textbf{Prioridad:} Alta.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-08}\\
+\textbf{Actores:} Sistema de emisión, Funcionario, Impresora certificada.\\
+\textbf{Precondición:} Expediente aprobado, pago conciliado, CRC apto, RUNT OK.\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El sistema construye el documento final con fotografía, datos y códigos de verificación.
+  \item El funcionario autentica la liberación de impresión.
+  \item El sistema envía a la cola de impresión segura; la impresión se registra (operador, hora, nº de serie).
+  \item El sistema sincroniza el número de serie con el expediente y con RUNT.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si la impresora falla, marcar reintento y guardar archivo maestro; posibilidad de impresión en otra estación con autorización.
+  \item Si existe excepción, requerir firma adicional antes de liberar impresión.
+\end{itemize}
+\textbf{Postcondición:} Licencia física impresa y asociada al expediente; registro de emisión.\\
+\textbf{RFs relacionadas:} RF-04, RF-10, RF-14.\\
+\textbf{Prioridad:} Alta.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-09}\\
+\textbf{Actores:} Sistema de notificaciones, Solicitante, Funcionario.\\
+\textbf{Precondición:} Cualquier hito importante (cita, recepción documento, pago, emisión, envío).\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El sistema selecciona plantilla y canal (correo o SMS) según preferencia registrada.
+  \item Envía la notificación con datos y/o adjunta comprobantes en PDF.
+  \item Registra la entrega (éxito/fracaso) en el log de comunicaciones.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si el envío falla, el sistema reintenta según política y registra intentos; informa al funcionario si hay fallas repetidas.
+\end{itemize}
+\textbf{Postcondición:} Notificación enviada y registro de intento en expediente.\\
+\textbf{RFs relacionadas:} RF-08.\\
+\textbf{Prioridad:} Media.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-10}\\
+\textbf{Actores:} Funcionario, Supervisor, Sistemas externos (RUNT, pasarela), Sistema local.\\
+\textbf{Precondición:} Caída o indisponibilidad de RUNT, pasarela de pagos u otro servicio crítico.\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El sistema detecta el fallo en el servicio externo y activa modo contingencia.
+  \item El funcionario puede continuar ciertos pasos (registro local de eventos, captura de comprobantes) pero con limitaciones (no se permite emisión final si no cumple reglas).
+  \item Todas las acciones quedan marcadas como “pendientes de sincronización”.
+  \item Al restablecerse el servicio, el sistema sincroniza y concilia automáticamente los registros pendientes.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Para casos excepcionales que requieren emisión inmediata y el servicio sigue caído, el supervisor puede autorizar emisión manual con justificativo y firma electrónica.
+\end{itemize}
+\textbf{Postcondición:} Registros en modo offline, listas para sincronizar; trazabilidad completa.\\
+\textbf{RFs relacionadas:} RF-10, RF-07, RF-04, RF-05, RF-03.\\
+\textbf{Prioridad:} Alta.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-11}\\
+\textbf{Actores:} Sistema de auditoría, Auditor/Administrador, Funcionario.\\
+\textbf{Precondición:} Cualquier acción relevante sobre expediente (consultas, impresiones, cambios de estado).\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El sistema registra el evento apend-only con usuario, timestamp, motivo y metadatos.
+  \item El administrador/auditor puede consultar y exportar reportes filtrados por periodo, sede o tipo de evento.
+  \item El sistema aplica controles de acceso a los logs y preserva integridad.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si hay intento de eliminación o modificación ilícita, el sistema genera alerta y bloquea la operación; registro forense disponible.
+\end{itemize}
+\textbf{Postcondición:} Eventos auditados y reportes disponibles.\\
+\textbf{RFs relacionadas:} RF-10, RF-11.\\
+\textbf{Prioridad:} Alta.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-12}\\
+\textbf{Actores:} CRC/Escuela de conducción/Entidad financiera, Sistema, Funcionario.\\
+\textbf{Precondición:} Proveedor autorizado sube certificado/comprobante.\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El proveedor envía documento y metadatos mediante portal seguro.
+  \item El sistema valida la firma y asocia el documento al expediente correspondiente.
+  \item El funcionario recibe notificación y el documento aparece en el checklist.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si la firma no es válida o el proveedor no está autorizado, el documento queda en cuarentena y se notifica a supervisión.
+\end{itemize}
+\textbf{Postcondición:} Documento disponible en expediente y listado en checklist.\\
+\textbf{RFs relacionadas:} RF-15, RF-02.\\
+\textbf{Prioridad:} Media-Alta.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-13}\\
+\textbf{Actores:} Administrador, Sistema de archivo, Auditoría.\\
+\textbf{Precondición:} Plazo de retención próximo o petición de archivo/eliminación.\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El sistema identifica expedientes próximos a vencimiento de retención.
+  \item Envía alertas a administración para revisar y autorizar exportación o eliminación.
+  \item Si procede, exporta a archivo o elimina según política, dejando registro en auditoría.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si el expediente está sujeto a investigación o requerimiento legal, se suspende eliminación y se marca retención extendida.
+\end{itemize}
+\textbf{Postcondición:} Registro de conservación/eliminación y cumplimiento documental.\\
+\textbf{RFs relacionadas:} RF-11.\\
+\textbf{Prioridad:} Media.
+
+\vspace{8pt}
+
+\noindent \textbf{UC-14}\\
+\textbf{Actores:} Solicitante, Sistema de expedientes.\\
+\textbf{Precondición:} Hito cumplido (pago, emisión, notificación).\\
+\textbf{Flujo principal:}
+\begin{enumerate}
+  \item El solicitante accede al portal con credenciales o con código seguro.
+  \item Selecciona comprobante y descarga PDF con sello y código de verificación.
+  \item El sistema registra la descarga en auditoría.
+\end{enumerate}
+\textbf{Flujos alternativos:}
+\begin{itemize}
+  \item Si el usuario no figura o hay múltiples expedientes, se solicita verificación.
+\end{itemize}
+\textbf{Postcondición:} Comprobante descargado y registro en log.\\
+\textbf{RFs relacionadas:} RF-08, RF-16.\\
+\textbf{Prioridad:} Media.
+
+\newpage
+\textbf{Diagrama de secuencia}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{DiagramSecuence.png}
+    \caption{Diagrama de secuencia}
+    \vspace{0.5cm}
+    \small Fuente: Elaboración propia.
+  \label{fig:sequence}
+\end{figure}
+
+\newpage
+
+\textbf{Diagramas de actividades}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{ActivityDiagram1.png}
+    \caption{Diagrama de actividades 1}
+    \vspace{0.5cm}
+    \small Fuente: Elaboración propia.
+  \label{fig:activity1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{ActivityDiagram2.png}
+    \caption{Diagrama de actividades 2}
+    \vspace{0.5cm}
+    \small Fuente: Elaboración propia.
+  \label{fig:activity2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{ActivityDiagram3.png}
+    \caption{Diagrama de actividades 3}
+    \vspace{0.5cm}
+    \small Fuente: Elaboración propia.
+  \label{fig:activity3}
+\end{figure}
+
+\newpage
+
+\textbf{Diagrama de clases}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{ClassDiagram.png}
+    \caption{Diagrama de clases}
+    \vspace{0.5cm}
+    \small Fuente: Elaboración propia.
+    \label{fig:classdiagram}
+\end{figure}
+
+\subsection{Costos detallados y proyectados}
+Los costos se presentarán en un archivo de Excel con el desglose correspondiente.
+
+
+\end{document}
