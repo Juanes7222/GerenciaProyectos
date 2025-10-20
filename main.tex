@@ -173,12 +173,7 @@ ciudadano.
 \end{itemize}
 
 \subsection{Alcance}
-El presente proyecto tiene por objeto definir, desarrollar e implantar la solución correspondiente a la etapa final
-del proceso de expedición de licencias de conducción para personas que solicitan la licencia por primera vez. Esta
-intervención se orienta a optimizar la atención presencial en las sedes de la Secretaría de Tránsito, garantizando orden,
-trazabilidad y seguridad en la entrega física de la licencia y de los comprobantes asociados. El sistema estará compuesto por
-varios módulos funcionales que trabajarán de forma integrada para garantizar una atención ordenada, segura y trazable en las
-sedes de la Secretaría de Tránsito. A continuación, se describen los módulos principales que conformarán el sistema:
+Se propone implantar, en modalidad piloto y en una sede de la Secretaría de Tránsito de Pereira, una solución informática acotada para la etapa final del trámite de expedición de licencias de conducción a solicitantes por primera vez. El sistema estará compuesto por varios módulos funcionales que trabajarán de forma integrada para garantizar una atención ordenada, segura y trazable en las sedes de la Secretaría de Tránsito. A continuación, se describen los módulos principales que conformarán el sistema:
 
 \subsubsection*{Módulo de gestión de llegada y turnos}
 Este módulo atenderá el registro de la llegada de los ciudadanos y la administración de las colas de atención. Sus funciones
@@ -303,12 +298,11 @@ Este módulo facilitará la adopción y el uso adecuado del sistema por parte de
 
 
 \subsection{Población impactada}
-El proyecto impactará de manera directa a los ciudadanos que adelantan por primera vez el proceso de obtención de la licencia de conducción, así como a los funcionarios y entidades que intervienen en la etapa final de expedición del documento. En primer lugar, los solicitantes de licencia serán los principales beneficiarios, dado que el sistema propuesto permitirá una atención más ágil, ordenada y transparente. A través de la automatización de los turnos, la verificación documental y la trazabilidad de cada trámite, los usuarios experimentarán una reducción en los tiempos de espera y una mayor claridad sobre el estado de su proceso, fortaleciendo así la confianza en la gestión de la Secretaría de Tránsito.
+El proyecto impacta de forma directa a las personas que tramitan por primera vez la licencia de conducción en Pereira y, de forma indirecta, al personal operativo y a los proveedores vinculados al proceso. La proyección de población municipal utilizada como referencia corresponde a la estimación oficial más reciente (DANE, 2024), que sitúa a Pereira en torno a 482.000 habitantes en 2024. Esta referencia poblacional sirve para contextualizar la escala del servicio. (DANE, 2024).
 
-De igual forma, el proyecto tendrá un impacto positivo sobre los funcionarios de la entidad, especialmente aquellos encargados de la atención al ciudadano, la validación de documentos y la supervisión de los procesos de entrega. La implementación del sistema proporcionará herramientas más eficientes para la revisión, control y registro de cada expediente, reduciendo la carga operativa y mejorando la coordinación entre áreas. Esto favorecerá un entorno de trabajo más ordenado, con procedimientos uniformes y verificables, lo que contribuirá a una gestión institucional más eficiente y trazable.
+Según el Informe de Gestión del Instituto de Movilidad de Pereira (corte 30 de noviembre de 2024), en el periodo julio-noviembre de 2024 se registraron 5.803 expediciones de licencias (acto de expedición) y 16.579 trámites relacionados con licencias de conducción en la vigencia reportada; a partir de estos datos se obtiene una estimación operativa de aprox. 1.161 expediciones/mes para dicho intervalo, que representa la carga de trabajo que el piloto podría atender en la sede. (Instituto de Movilidad de Pereira, 2024).
 
-También se verán beneficiadas las áreas administrativas y financieras de la Secretaría, que contarán con registros más consistentes y conciliaciones automáticas en los procesos de pago y emisión. Este componente permitirá fortalecer el control interno, minimizar los errores humanos y facilitar la rendición de cuentas ante los entes de control. Asimismo, los proveedores externos, como los centros de reconocimiento de conductores y las entidades que transmiten información al Registro Único Nacional de Tránsito (RUNT), tendrán un flujo de comunicación más estable y seguro, evitando reprocesos y pérdidas de información.
-
+Los beneficiarios directos son, por tanto, los solicitantes de primeras expediciones y los operadores de ventanilla; los beneficiarios indirectos incluyen supervisores, áreas administrativas y financieras de la Secretaría, así como los proveedores externos (p. ej. CRC y proveedor de impresión), dado que el sistema mejorará la trazabilidad, reducirá reprocesos y facilitará la conciliación de pagos. Para estimaciones más finas (por ejemplo, identificar exclusivamente primeras expediciones) se recomienda solicitar la desagregación por tipo de trámite a las bases del RUNT o al Instituto. (DANE, 2024; Instituto de Movilidad de Pereira, 2024).
 \subsection{Elementos normativos}
 Mencionar las normas, leyes, reglamentos o estándares aplicables (si existen).
 
@@ -366,6 +360,72 @@ Descripción de los espacios físicos necesarios.
 	\item \textbf{RF-11: }
 	      El sistema debe aplicar las reglas de retención documental vigentes: programar plazos de conservación, generar alertas previas a eliminación, soportar la exportación segura a archivo y asegurar eliminación segura cuando proceda. Las políticas de protección de datos personales se aplican a todo el ciclo de vida del expediente.
 \end{enumerate}
+
+\textbf{Requisitos no funcionales}
+
+A continuación se describen los requisitos no funcionales que deberá cumplir la solución. Cada requisito está formulado de forma precisa y contiene criterios de aceptación verificables.
+
+\begin{enumerate}
+
+\item \textbf{RNF-01: } 
+El sistema deberá responder a las interacciones del funcionario en la interfaz de ventanilla en un tiempo máximo de 2 segundos para operaciones de consulta y 4 segundos para operaciones de registro o escritura.
+
+\item \textbf{RNF-02: } 
+El sistema deberá soportar al menos 50 usuarios concurrentes (entre operadores, supervisores y personal administrativo) sin degradar su desempeño. Se deberán mantener tiempos de respuesta dentro de los límites definidos en el RNF-01, incluso bajo carga simultánea.
+
+\item \textbf{RNF-03: } 
+La disponibilidad del sistema deberá ser igual o superior al 90\% mensual, exceptuando los mantenimientos programados con aviso previo. Esta disponibilidad es necesaria para garantizar la continuidad del proceso de expedición de licencias en horarios de atención.
+
+\item \textbf{RNF-04: } 
+Ante la caída de servicios externos como RUNT o la pasarela de pagos, el sistema deberá activar un modo de contingencia que permita continuar la atención con registros locales. La sincronización de los datos pendientes deberá realizarse automáticamente en un máximo de 24 horas una vez se restablezca la conexión.
+
+\item \textbf{RNF-05: } 
+Toda la información relacionada con expedientes, auditorías y casos de excepción deberá conservarse íntegra y disponible por un mínimo de cinco años, o el tiempo exigido por la normativa vigente (Ley 594 de 2000). Los registros deberán incluir trazabilidad completa de usuario, fecha y hora.
+
+\item \textbf{RNF-06: } 
+Toda la comunicación entre el sistema y los servicios externos deberá realizarse bajo cifrado TLS 1.2 o superior. Los datos personales almacenados en la base de datos deberán cifrarse con algoritmos AES-256 y gestionarse conforme a las políticas de protección de datos personales.
+
+\item \textbf{RNF-07: } 
+El sistema deberá implementar autenticación basada en roles y privilegios (RBAC). Los usuarios con funciones críticas, como supervisores o responsables financieros, deberán autenticarse con doble factor (2FA). Las acciones realizadas deben quedar registradas para auditoría.
+
+\item \textbf{RNF-08: } 
+Toda acción que implique validación, aprobación o firma digital deberá generar un registro inmutable con sello de tiempo, usuario y motivo. Dichos registros no podrán ser modificados ni eliminados por usuarios finales, asegurando no repudio en las operaciones.
+
+\item \textbf{RNF-09: } 
+El sistema deberá cumplir las disposiciones de la Ley 1581 de 2012 y normas complementarias sobre protección de datos personales, garantizando consentimiento informado, minimización de datos y mecanismos de supresión o actualización por parte del titular.
+
+\item \textbf{RNF-10: } 
+Todas las transacciones, integraciones y acciones relevantes (consultas RUNT, pagos, emisión de licencias, verificaciones biométricas) deberán generar registros de auditoría consultables. Estos registros deberán exportarse en formato PDF o CSV para control institucional.
+
+\item \textbf{RNF-11: } 
+La arquitectura del sistema deberá permitir su escalabilidad horizontal en los módulos críticos, de modo que se pueda aumentar la capacidad de procesamiento sin modificaciones estructurales. Esto permitirá adaptarse al crecimiento en el número de solicitudes atendidas.
+
+\item \textbf{RNF-12: } 
+El código fuente deberá mantenerse bajo control de versiones, con documentación actualizada y pruebas unitarias que cubran al menos el 60\% de los módulos críticos. Esto facilitará la mantenibilidad y reducirá errores en futuras versiones del sistema.
+
+\item \textbf{RNF-13: } 
+Las integraciones con RUNT, CRC y la pasarela de pagos deberán implementarse mediante servicios RESTful documentados en Swagger, con manejo de errores estandarizado, reintentos automáticos y validación de respuestas.
+
+\item \textbf{RNF-14: } 
+El sistema deberá realizar copias de respaldo automáticas diarias con retención mínima de 30 días.
+
+\item \textbf{RNF-15: } 
+Los registros de aplicación, seguridad y acceso deberán centralizarse en un sistema de logs con retención mínima de un año. Se deberán generar alertas automáticas ante intentos de acceso fallidos repetidos o comportamientos anómalos.
+
+\item \textbf{RNF-16: } 
+El sistema deberá estar completamente localizado en idioma español y utilizar formatos de fecha, moneda y notificación acordes con la región de Pereira. Todos los mensajes de interfaz deberán estar traducidos y revisados para comprensión ciudadana.
+
+\item \textbf{RNF-17: } 
+El sistema deberá ser compatible con navegadores modernos (Google Chrome y Microsoft Edge en sus versiones soportadas).
+\item \textbf{RNF-18: } 
+El sistema deberá implementar las políticas de retención y eliminación segura de documentos definidas por la Secretaría de Tránsito. Antes de la eliminación, deberá generar alertas y permitir exportación segura a archivos institucionales.
+
+
+\end{enumerate}
+
+% Nota: los valores cuantitativos (tiempos, porcentajes, cargas) están diseñados para ser revisados y ajustados en la planificación ejecutiva con la Secretaría y las áreas de TI.
+
+
 
 \textbf{Casos de uso}
 
