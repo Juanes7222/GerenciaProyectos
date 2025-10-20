@@ -172,22 +172,21 @@ Tendrá como labores fundamentales la compra de servidores y equipos, modernizac
 \subsection{Objetivos}
 
 \subsubsection{Objetivo General}
-Implementar un sistema de trámites para licencias de conducción ágil, eficiente y automatizado, que mejore la experiencia del ciudadano.
+Gestionar un sistema de trámites para licencias de conducción
+ágil, eficiente y automatizado, que mejore la experiencia del
+ciudadano.
 
 \subsubsection{Objetivos Específicos}
 \begin{itemize}
-	\item Automatizar los procedimientos administrativos relacionados con la expedición de licencias
-	\item Incrementar la productividad de los funcionarios mediante capacitación y herramientas digitales.
-	\item Fortalecer la trazabilidad, seguridad y interoperabilidad del proceso mediante la integración con plataformas externas (RUNT, CRC, pasarelas de pago) y la implementación de mecanismos de contingencia, auditoría y verificación biométrica.
+	\item Realizar el levantamiento y análisis de los requerimientos del sistema, identificando las necesidades del usuario y los requerimientos funcionales y no funcionales del proyecto.
+	\item Diseñar la arquitectura y los componentes del sistema, definiendo los módulos, la estructura de datos y la interfaz de usuario.
+	\item Desarrollar el código fuente del sistema siguiendo buenas prácticas de programación y asegurando la coherencia con el diseño propuesto.
+	\item Efectuar pruebas de validación y verificación para evaluar la funcionalidad, eficiencia y confiabilidad del sistema.
+	\item Elaborar la documentación técnica y de usuario que describa el funcionamiento, instalación y mantenimiento del sistema.
 \end{itemize}
 
 \subsection{Alcance}
-El presente proyecto tiene por objeto definir, desarrollar e implantar la solución correspondiente a la etapa final
-del proceso de expedición de licencias de conducción para personas que solicitan la licencia por primera vez. Esta
-intervención se orienta a optimizar la atención presencial en las sedes de la Secretaría de Tránsito, garantizando orden,
-trazabilidad y seguridad en la entrega física de la licencia y de los comprobantes asociados. El sistema estará compuesto por
-varios módulos funcionales que trabajarán de forma integrada para garantizar una atención ordenada, segura y trazable en las
-sedes de la Secretaría de Tránsito. A continuación, se describen los módulos principales que conformarán el sistema:
+Se propone implantar, en modalidad piloto y en una sede de la Secretaría de Tránsito de Pereira, una solución informática acotada para la etapa final del trámite de expedición de licencias de conducción a solicitantes por primera vez. El sistema estará compuesto por varios módulos funcionales que trabajarán de forma integrada para garantizar una atención ordenada, segura y trazable en las sedes de la Secretaría de Tránsito. A continuación, se describen los módulos principales que conformarán el sistema:
 
 \subsubsection*{Módulo de gestión de llegada y turnos}
 Este módulo atenderá el registro de la llegada de los ciudadanos y la administración de las colas de atención. Sus funciones
@@ -312,12 +311,11 @@ Este módulo facilitará la adopción y el uso adecuado del sistema por parte de
 
 
 \subsection{Población impactada}
-El proyecto impactará de manera directa a los ciudadanos que adelantan por primera vez el proceso de obtención de la licencia de conducción, así como a los funcionarios y entidades que intervienen en la etapa final de expedición del documento. En primer lugar, los solicitantes de licencia serán los principales beneficiarios, dado que el sistema propuesto permitirá una atención más ágil, ordenada y transparente. A través de la automatización de los turnos, la verificación documental y la trazabilidad de cada trámite, los usuarios experimentarán una reducción en los tiempos de espera y una mayor claridad sobre el estado de su proceso, fortaleciendo así la confianza en la gestión de la Secretaría de Tránsito.
+El proyecto impacta de forma directa a las personas que tramitan por primera vez la licencia de conducción en Pereira y, de forma indirecta, al personal operativo y a los proveedores vinculados al proceso. La proyección de población municipal utilizada como referencia corresponde a la estimación oficial más reciente (DANE, 2024), que sitúa a Pereira en torno a 482.000 habitantes en 2024. Esta referencia poblacional sirve para contextualizar la escala del servicio. (DANE, 2024).
 
-De igual forma, el proyecto tendrá un impacto positivo sobre los funcionarios de la entidad, especialmente aquellos encargados de la atención al ciudadano, la validación de documentos y la supervisión de los procesos de entrega. La implementación del sistema proporcionará herramientas más eficientes para la revisión, control y registro de cada expediente, reduciendo la carga operativa y mejorando la coordinación entre áreas. Esto favorecerá un entorno de trabajo más ordenado, con procedimientos uniformes y verificables, lo que contribuirá a una gestión institucional más eficiente y trazable.
+Según el Informe de Gestión del Instituto de Movilidad de Pereira (corte 30 de noviembre de 2024), en el periodo julio-noviembre de 2024 se registraron 5.803 expediciones de licencias (acto de expedición) y 16.579 trámites relacionados con licencias de conducción en la vigencia reportada; a partir de estos datos se obtiene una estimación operativa de aprox. 1.161 expediciones/mes para dicho intervalo, que representa la carga de trabajo que el piloto podría atender en la sede. (Instituto de Movilidad de Pereira, 2024).
 
-También se verán beneficiadas las áreas administrativas y financieras de la Secretaría, que contarán con registros más consistentes y conciliaciones automáticas en los procesos de pago y emisión. Este componente permitirá fortalecer el control interno, minimizar los errores humanos y facilitar la rendición de cuentas ante los entes de control. Asimismo, los proveedores externos, como los centros de reconocimiento de conductores y las entidades que transmiten información al Registro Único Nacional de Tránsito (RUNT), tendrán un flujo de comunicación más estable y seguro, evitando reprocesos y pérdidas de información.
-
+Los beneficiarios directos son, por tanto, los solicitantes de primeras expediciones y los operadores de ventanilla; los beneficiarios indirectos incluyen supervisores, áreas administrativas y financieras de la Secretaría.
 \subsection{Elementos normativos}
 
 \subsection*{Marco Regulatorio Fundamental: Tránsito, Transporte y Gobierno Digital}
@@ -458,6 +456,7 @@ Implementación de ciberseguridad & Ley Marco de Ciberseguridad y Plan de Seguri
 \hline
 \end{tabular}
 \vspace{0.3cm}
+\newline
 \small Fuente: Elaboración propia.
 \end{table}
 
@@ -476,6 +475,7 @@ RF-08 (Notificaciones) & Canales de Contacto (SMS/Correo) & Ley 1581/2012, Circu
 \hline
 \end{tabular}
 \vspace{0.3cm}
+\newline
 \small Fuente: Elaboración propia.
 \end{table}
 
@@ -843,6 +843,72 @@ El proyecto no requiere centros de datos, cuartos técnicos especializados, sist
 	      El sistema debe aplicar las reglas de retención documental vigentes: programar plazos de conservación, generar alertas previas a eliminación, soportar la exportación segura a archivo y asegurar eliminación segura cuando proceda. Las políticas de protección de datos personales se aplican a todo el ciclo de vida del expediente.
 \end{enumerate}
 
+\textbf{Requisitos no funcionales}
+
+A continuación se describen los requisitos no funcionales que deberá cumplir la solución. Cada requisito está formulado de forma precisa y contiene criterios de aceptación verificables.
+
+\begin{enumerate}
+
+\item \textbf{RNF-01: } 
+El sistema deberá responder a las interacciones del funcionario en la interfaz de ventanilla en un tiempo máximo de 2 segundos para operaciones de consulta y 4 segundos para operaciones de registro o escritura.
+
+\item \textbf{RNF-02: } 
+El sistema deberá soportar al menos 50 usuarios concurrentes (entre operadores, supervisores y personal administrativo) sin degradar su desempeño. Se deberán mantener tiempos de respuesta dentro de los límites definidos en el RNF-01, incluso bajo carga simultánea.
+
+\item \textbf{RNF-03: } 
+La disponibilidad del sistema deberá ser igual o superior al 90\% mensual, exceptuando los mantenimientos programados con aviso previo. Esta disponibilidad es necesaria para garantizar la continuidad del proceso de expedición de licencias en horarios de atención.
+
+\item \textbf{RNF-04: } 
+Ante la caída de servicios externos como RUNT o la pasarela de pagos, el sistema deberá activar un modo de contingencia que permita continuar la atención con registros locales. La sincronización de los datos pendientes deberá realizarse automáticamente en un máximo de 24 horas una vez se restablezca la conexión.
+
+\item \textbf{RNF-05: } 
+Toda la información relacionada con expedientes, auditorías y casos de excepción deberá conservarse íntegra y disponible por un mínimo de cinco años, o el tiempo exigido por la normativa vigente (Ley 594 de 2000). Los registros deberán incluir trazabilidad completa de usuario, fecha y hora.
+
+\item \textbf{RNF-06: } 
+Toda la comunicación entre el sistema y los servicios externos deberá realizarse bajo cifrado TLS 1.2 o superior. Los datos personales almacenados en la base de datos deberán cifrarse con algoritmos AES-256 y gestionarse conforme a las políticas de protección de datos personales.
+
+\item \textbf{RNF-07: } 
+El sistema deberá implementar autenticación basada en roles y privilegios (RBAC). Los usuarios con funciones críticas, como supervisores o responsables financieros, deberán autenticarse con doble factor (2FA). Las acciones realizadas deben quedar registradas para auditoría.
+
+\item \textbf{RNF-08: } 
+Toda acción que implique validación, aprobación o firma digital deberá generar un registro inmutable con sello de tiempo, usuario y motivo. Dichos registros no podrán ser modificados ni eliminados por usuarios finales, asegurando no repudio en las operaciones.
+
+\item \textbf{RNF-09: } 
+El sistema deberá cumplir las disposiciones de la Ley 1581 de 2012 y normas complementarias sobre protección de datos personales, garantizando consentimiento informado, minimización de datos y mecanismos de supresión o actualización por parte del titular.
+
+\item \textbf{RNF-10: } 
+Todas las transacciones, integraciones y acciones relevantes (consultas RUNT, pagos, emisión de licencias, verificaciones biométricas) deberán generar registros de auditoría consultables. Estos registros deberán exportarse en formato PDF o CSV para control institucional.
+
+\item \textbf{RNF-11: } 
+La arquitectura del sistema deberá permitir su escalabilidad horizontal en los módulos críticos, de modo que se pueda aumentar la capacidad de procesamiento sin modificaciones estructurales. Esto permitirá adaptarse al crecimiento en el número de solicitudes atendidas.
+
+\item \textbf{RNF-12: } 
+El código fuente deberá mantenerse bajo control de versiones, con documentación actualizada y pruebas unitarias que cubran al menos el 60\% de los módulos críticos. Esto facilitará la mantenibilidad y reducirá errores en futuras versiones del sistema.
+
+\item \textbf{RNF-13: } 
+Las integraciones con RUNT, CRC y la pasarela de pagos deberán implementarse mediante servicios RESTful documentados en Swagger, con manejo de errores estandarizado, reintentos automáticos y validación de respuestas.
+
+\item \textbf{RNF-14: } 
+El sistema deberá realizar copias de respaldo automáticas diarias con retención mínima de 30 días.
+
+\item \textbf{RNF-15: } 
+Los registros de aplicación, seguridad y acceso deberán centralizarse en un sistema de logs con retención mínima de un año. Se deberán generar alertas automáticas ante intentos de acceso fallidos repetidos o comportamientos anómalos.
+
+\item \textbf{RNF-16: } 
+El sistema deberá estar completamente localizado en idioma español y utilizar formatos de fecha, moneda y notificación acordes con la región de Pereira. Todos los mensajes de interfaz deberán estar traducidos y revisados para comprensión ciudadana.
+
+\item \textbf{RNF-17: } 
+El sistema deberá ser compatible con navegadores modernos (Google Chrome y Microsoft Edge en sus versiones soportadas).
+\item \textbf{RNF-18: } 
+El sistema deberá implementar las políticas de retención y eliminación segura de documentos definidas por la Secretaría de Tránsito. Antes de la eliminación, deberá generar alertas y permitir exportación segura a archivos institucionales.
+
+
+\end{enumerate}
+
+% Nota: los valores cuantitativos (tiempos, porcentajes, cargas) están diseñados para ser revisados y ajustados en la planificación ejecutiva con la Secretaría y las áreas de TI.
+
+
+
 \textbf{Casos de uso}
 
 \noindent \textbf{UC-01}\\
@@ -1135,7 +1201,123 @@ El proyecto no requiere centros de datos, cuartos técnicos especializados, sist
 
 \newpage
 
-\textbf{Diagramas de actividades}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU1.png}
+	\caption{Diagrama de secuencia 1}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence1}
+\end{figure}
+
+% Diagramas de secuencia adicionales (2 a 13)
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU2.png}
+	\caption{Diagrama de secuencia 2}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU3.png}
+	\caption{Diagrama de secuencia 3}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU4.png}
+	\caption{Diagrama de secuencia 4}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU5.png}
+	\caption{Diagrama de secuencia 5}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence5}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU6.png}
+	\caption{Diagrama de secuencia 6}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence6}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU7.png}
+	\caption{Diagrama de secuencia 7}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence7}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU8.png}
+	\caption{Diagrama de secuencia 8}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence8}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU9.png}
+	\caption{Diagrama de secuencia 9}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence9}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU10.png}
+	\caption{Diagrama de secuencia 10}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence10}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU11.png}
+	\caption{Diagrama de secuencia 11}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence11}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU12.png}
+	\caption{Diagrama de secuencia 12}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence12}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{DS/DSCU13.png}
+	\caption{Diagrama de secuencia 13}
+	\vspace{0.5cm}
+	\small Fuente: Elaboración propia.
+	\label{fig:sequence13}
+\end{figure}
 
 \begin{figure}[H]
 	\centering
@@ -1415,6 +1597,16 @@ Universidad Externado de Colombia. (2024, 4 de septiembre). \textit{La SIC actú
 
 \bibitem{capacitacionunir}
 Aguiar Ulloa, D. V. (s.f.). \textit{Elaboración de un plan de capacitación por competencias para los servidores públicos}. \url{https://reunir.unir.net/bitstream/handle/123456789/5594/AGUIAR%20ULLOA%2C%20DOUGLAS.pdf?isAllowed=y&sequence=1}. Consultado: 2025-10-08.
+
+\bibitem{DANE2024}
+Departamento Administrativo Nacional de Estadística (DANE). (2024). \textit{Proyecciones y retroproyecciones de población municipal, 2018--2042}. Recuperado de \url{https://www.dane.gov.co/index.php/estadisticas-por-tema/demografia-y-poblacion/proyecciones-de-poblacion}
+
+\bibitem{IMP2024}
+Instituto de Movilidad de Pereira. (2024). \textit{Informe de gestión — Corte 30 de noviembre de 2024}. Pereira: Instituto de Movilidad de Pereira. Recuperado de \url{https://movilidadpereira.gov.co/Documentos/Dependencias/2024/planeacion/INFORMEDEGESTION30DENOVIEMBREDE2024.pdf}
+
+\bibitem{AGN2024}
+Archivo General de la Nación. (2024). \textit{Acuerdo 001 de 2024. Por el cual se establece el Acuerdo Único de la Función Archivística, se definen los criterios técnicos y jurídicos para su implementación en el Estado Colombiano y se fijan otras disposiciones}. Recuperado de \url{https://sedeelectronica.sic.gov.co/sites/default/files/normativa/POLITICA%20DE%20DOCUMENTOS%20ELECTRONICOS%20DE%20ARCHIVO.pdf}
+
 
 \end{thebibliography}
 
