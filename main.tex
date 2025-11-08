@@ -46,6 +46,13 @@
 \fancyhf{}
 \fancyfoot[C]{\thepage}
 
+% Estilo especial para páginas landscape
+\fancypagestyle{landscapestyle}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[R]{\smash{\raisebox{0.75\textheight}{\rotatebox{90}{\thepage}}}}
+}
+
 % Comando para rotar texto en tablas
 \newcommand{\rot}[1]{\rotatebox{90}{\parbox{2cm}{\centering #1}}}
 
@@ -55,6 +62,7 @@
 % load hyperref as the last package to avoid redefinition/hook issues
 \usepackage[hidelinks]{hyperref}
 \let\cleardoublepage\clearpage
+
 \begin{document}
 
 % Portada
@@ -90,6 +98,9 @@
 \input{alternatives/alternatives.tex}
 
 \input{indicators/indicators.tex}
+
+
+\input{mml/mml.tex}
 
 \input{references.tex}
 
