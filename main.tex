@@ -23,8 +23,8 @@
 \usepackage{multirow}
 \usepackage{caption}
 \usepackage{float}
-\usepackage[style=apa, backend=biber]{biblatex}
-\addbibresource{references.bib} % Archivo de bibliografía
+% \usepackage[style=apa, backend=biber]{biblatex}
+% \addbibresource{references.bib} % Archivo de bibliografía (no usado - bibliografía manual en references.tex)
 \usepackage{xcolor}
 \usepackage{hyphenat}
 \usepackage{ragged2e} 
@@ -71,7 +71,7 @@
 	\includegraphics[width=5cm]{logo_universidad.png}\par
 	\vspace{1cm}
 
-	{\bfseries\LARGE Entrega final\par}
+	{\bfseries\LARGE Entrega final: Easy Transit\par}
 	\vspace{2cm}
 	{\large Autores: Jorge Luis Araque, Juan Camilo Velasquez, Juan David Tabares, Jhoan Esteban Corrales, Juan Esteban Cardona, Maicol Stiven Ruiz y Santiago Marin\par}
 	{\large Docente: Alexánder Quintero\par}
@@ -90,18 +90,16 @@
 \listoftables
 \newpage
 
-% Involucrados
 \input{involved/involved.tex}
 
 \input{trees/trees.tex}
-% Involucrados
+
 \input{alternatives/alternatives.tex}
 
 \input{indicators/indicators.tex}
 
-
 \input{mml/mml.tex}
 
-\input{references.tex}
+\input{./references.tex}
 
 \end{document}
